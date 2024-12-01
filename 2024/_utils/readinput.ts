@@ -10,3 +10,9 @@ export function readTextInput(day: number, part: number): string {
 
     return Deno.readTextFileSync(formatPath);
 }
+
+export function readTextInputLines(day: number, part: number): string[] {
+  const lineSeparator = '\r\n';
+  const text = readTextInput(day, part);
+  return text.split(lineSeparator);
+}
