@@ -1,7 +1,33 @@
 ﻿#https://adventofcode.com/2015/day/3#part2
 
-$InputFilePath = ".\input.txt"
+$InputFilePath = "..\..\inputs\2015\day3\input.txt"
 $InputContent = Get-Content -Path:$InputFilePath
+
+function MoveLocation($Direction, $CurrentLocation) {
+    $currentX = $CurrentLocation.X
+    $currentY = $CurrentLocation.Y
+
+    if ($Direction -eq ">") {
+        $currentX += 1
+    }
+
+    if ($Direction -eq "<") {
+        $currentX -= 1
+    }
+
+    if ($Direction -eq "^") {
+        $currentY -= 1
+    }
+
+
+    if ($Direction -eq "v") {
+        $currentY += 1
+    }
+
+    $CurrentLocation.X = $currentX
+    $CurrentLocation.y = $currentY
+    return $CurrentLocation
+}
 
 $visitedHouses = [string[]]@("0,0")
 $SantaLocation = [PSCustomObject]@{
@@ -36,29 +62,3 @@ for($i = 0; $i -lt $InputContent.length; $i++) {
 }
 
 Write-Host "Total visited houses:", $visitedHouses.Length
-
-function MoveLocation($Direction, $CurrentLocation) {
-    $currentX = $CurrentLocation.X
-    $currentY = $CurrentLocation.Y
-
-    if ($Direction -eq ">") {
-        $currentX += 1
-    }
-
-    if ($Direction -eq "<") {
-        $currentX -= 1
-    }
-
-    if ($Direction -eq "^") {
-        $currentY -= 1
-    }
-
-
-    if ($Direction -eq "v") {
-        $currentY += 1
-    }
-
-    $CurrentLocation.X = $currentX
-    $CurrentLocation.y = $currentY
-    return $CurrentLocation
-}

@@ -1,6 +1,6 @@
 ﻿# https://adventofcode.com/2015/day/3
 
-$InputFilePath = ".\input.txt"
+$InputFilePath = "..\..\inputs\2015\day3\input.txt"
 $InputContent = Get-Content -Path:$InputFilePath
 
 $visitedHouses = [string[]]@("0,0")

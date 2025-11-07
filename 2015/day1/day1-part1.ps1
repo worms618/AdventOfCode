@@ -1,6 +1,6 @@
 ﻿# https://adventofcode.com/2015/day/1
 
-$InputFilePath = ".\input.txt"
+$InputFilePath = "..\..\inputs\2015\day1\input.txt"
 $InputContent = Get-Content -Path:$InputFilePath
 
 $Floor = 0

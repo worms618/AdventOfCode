@@ -1,6 +1,6 @@
 ﻿# https://adventofcode.com/2015/day/2
 
-$InputFilePath = ".\input.txt"
+$InputFilePath = "..\..\inputs\2015\day2\input.txt"
 
 $Total = 0
 
