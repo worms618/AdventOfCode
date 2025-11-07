@@ -1,0 +1,3 @@
+[submodule "AOCInputs"]
+	path = AOCInputs
+	url = git@github.com:worms618/AOCInputs.git
